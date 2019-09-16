@@ -13,7 +13,7 @@ def name_to_number(name):
   elif name == 'scissors':
     num = 4
   else:
-    num = "uh oh! ERRORRRRRR MESSAGE"
+    num = 'uh oh! ERRORRRRRR MESSAGE'
   return num
 
 def number_to_name(number):
@@ -29,7 +29,7 @@ def number_to_name(number):
   elif number == 4:
     name = 'scissors'
   else:
-    name = "uh oh! ERRORRRRRR MESSAGE"
+    name = 'uh oh! ERRORRRRRR MESSAGE'
   return name
   
 def rpsls(player_choice): 
@@ -38,17 +38,17 @@ def rpsls(player_choice):
     computer_guess_name = number_to_name(computer_guess_num)
 
     if user_guess_num - computer_guess_num == 0:
-        print "You both picked", number_to_name(computer_guess_num), "you have tied!"
+        print 'You both picked', number_to_name(computer_guess_num), 'you have tied!'
     elif user_guess_num - computer_guess_num != 0:
-        print "Player chooses", player_choice, "\n","Computer chooses", computer_guess_name
+        print 'Player chooses', player_choice, '\n','Computer chooses', computer_guess_name
         if ((user_guess_num - computer_guess_num) % 5) > 2:
-            print "Computer wins! \n"
+            print 'Computer wins! \n'
         else:
-            print "Player wins! \n"
+            print 'Player wins! \n'
 
-rpsls("rock")
-rpsls("Spock")
-rpsls("paper")
-rpsls("lizard")
-rpsls("scissors")
+rpsls('rock')
+rpsls('Spock')
+rpsls('paper')
+rpsls('lizard')
+rpsls('scissors')
 
