@@ -34,14 +34,14 @@ def number_to_name(number):
   
 def rpsls(player_choice): 
     user_guess_num = name_to_number(player_choice)
-    computer_guess_num = random.randrange(0, 5)
-    computer_guess_name = number_to_name(computer_guess_num)
+    comp_number = random.randrange(0, 5)
+    comp_choice = number_to_name(comp_number)
 
-    if user_guess_num - computer_guess_num == 0:
-        print 'You both picked', number_to_name(computer_guess_num), 'you have tied!'
-    elif user_guess_num - computer_guess_num != 0:
-        print 'Player chooses', player_choice, '\n','Computer chooses', computer_guess_name
-        if ((user_guess_num - computer_guess_num) % 5) > 2:
+    if user_guess_num - comp_number == 0:
+        print 'You both picked', number_to_name(comp_number), 'you have tied! \n'
+    elif user_guess_num - comp_number != 0:
+        print 'Player chooses', player_choice, '\n','Computer chooses', comp_choice
+        if ((user_guess_num - comp_number) % 5) > 2:
             print 'Computer wins! \n'
         else:
             print 'Player wins! \n'
